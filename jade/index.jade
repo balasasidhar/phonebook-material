@@ -1,0 +1,57 @@
+extends layout
+
+block head
+    title My Phone Book
+
+block content
+    .container
+        .row
+            .col-md-12
+                .card
+                    .row
+                        .col-md-4
+                            .row
+                                .col-md-12
+                                    .contact-list-box
+                                        .input-group
+                                            .input-group-addon
+                                                span.glyphicon.glyphicon-search
+                                            input.form-control(type="text", aria-label="Search for contact", placeholder="Search")
+
+                                        .contact-list
+                                            .list-group
+                                                -for( var i = 0; i<10; i++)
+                                                    a.list-group-item(href="#")
+                                                        .row
+                                                            .col-md-2
+                                                                .avatar
+                                                                    | W
+                                                            .col-md-10
+                                                                h4.list-group-item-heading WitLabs
+                                                                p.list-group-item-content +91 9036582678
+
+                        .col-md-8
+                            .row
+                                .col-md-12
+                                    .app-heading
+                                        h4.page-header My Phone Book
+                            .row
+                                .col-md-10.col-md-offset-1
+                                    .contact-details
+
+                                        .card
+                                            .title WitLabs
+                                            .sub-title First Name
+                                        .card
+                                            .title Technologies Pvt Ltd
+                                            .sub-title Second Name
+                                        .card
+                                            .title +91 903 658 2678
+                                            .sub-title Mobile ( Office )
+                                        .card
+                                            .title info@witlabs.com
+                                            .sub-title Email
+
+                                        .fab
+                                            span.glyphicon.glyphicon-plus
+
